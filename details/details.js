@@ -20,10 +20,9 @@ function makeCarousel() {
   };
 }
 
-function getBusinessDetails() {
-  let businessId = "6lPfM2AJIC6CZddrTvFYnA";
+function getBusinessDetails(businessid) {
   //let businessId = "3en3UzByLjBDd0whFjYdTQ";
-  let url = `https://www.apitutor.org/yelp/v3/businesses/${businessId}`;
+  let url = `https://www.apitutor.org/yelp/v3/businesses/${businessid}`;
 
   fetch(url)
     .then((response) => response.json())
@@ -33,9 +32,9 @@ function getBusinessDetails() {
     });
 }
 
-function getBusinessReviews() {
-  let businessId = "3en3UzByLjBDd0whFjYdTQ";
-  let url = `https://www.apitutor.org/yelp/v3/businesses/${businessId}/reviews`;
+function getBusinessReviews(businessid) {
+  // let businessId = "3en3UzByLjBDd0whFjYdTQ";
+  let url = `https://www.apitutor.org/yelp/v3/businesses/${businessid}/reviews`;
 
   fetch(url)
     .then((response) => response.json())
@@ -97,5 +96,15 @@ function displayBusiness(businessData) {
   makeCarousel();
 }
 
-getBusinessDetails();
-getBusinessReviews();
+const params = new Proxy(new URLSearchParams(window.location.search), {
+  get: (searchParams, prop) => searchParams.get(prop),
+});
+// Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+let businessid = "6lPfM2AJIC6CZddrTvFYnA";
+
+if (params.businessid) {
+  businessid = params.businessid;
+}
+
+getBusinessDetails(businessid);
+getBusinessReviews(businessid);
