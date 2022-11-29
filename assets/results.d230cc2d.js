@@ -112,7 +112,7 @@ import"./modulepreload-polyfill.c7c6310f.js";const m=()=>{document.querySelector
      <div> 
           <h3>${e.name} </h3>
           <p>${e.display_phone}</p>
-          <button>More</button>
+          <a href= "../details/index.html?businessid=${e.id}">More</a>
       </div>
   </section>
  `}function d(){const e=document.querySelector("#category").value,t=document.querySelector("#location").value;u(e,t)}m();document.querySelector("#location").addEventListener("change",d);document.querySelector("#category").addEventListener("change",d);const n=new Proxy(new URLSearchParams(window.location.search),{get:(e,t)=>e.get(t)});let l="Phoenix, Az",a="";n.city&&(l=n.city);n.category&&(a=n.category);n.city;console.log(n.city);console.log(n.category);document.querySelector("#location").value=l;const r=document.querySelectorAll("#category option");a=="restaurant"&&(r[1].selected="selected");a=="events"&&(r[2].selected="selected");a=="coffeeShop"&&(r[3].selected="selected");a=="healthBeauty"&&(r[4].selected="selected");a=="nightlife"&&(r[5].selected="selected");a=="museums"&&(r[6].selected="selected");l=document.querySelector("#location").value;a=document.querySelector("#category").value;console.log(a,l);u(a,l);
