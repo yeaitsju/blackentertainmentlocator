@@ -4,7 +4,7 @@ import "../results.css";
 const initLayout = () => {
   document.querySelector("#app").innerHTML = `
         <main class="container">
-        <img id="logo1" src="BELlogo1.png" />
+        <img id="logo1" src="../images/BELlogo1.png" />
         <div class="topnav">
           <div id="search_box">
               <div id="search"></div>
@@ -19,8 +19,8 @@ const initLayout = () => {
         <!-- <a href="https://www.semrush.com/">Visit Semrush!</a> -->
         <a class="active" href="#home">Home</a>
         <!-- <a href="#photos">Photos</a> -->
-        <a href="index.html#contact">Contact</a>
-        <a href="index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="../index.html#about">About</a>
 
         <!-- <a href="#Photos">Photos</a> -->
       </div>

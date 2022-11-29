@@ -15,22 +15,22 @@ document.querySelector("#location").addEventListener("change", (e) => {
 
 // Created new function to loop through all the cities
 function setCategoryLinks(city) {
-  let newResturantLink = `results.html?city=${city}&category=restaurant`;
+  let newResturantLink = `results/index.html?city=${city}&category=restaurant`;
   resturantLink.href = newResturantLink;
 
-  let newEventLink = `results.html?city=${city}&category=events`;
+  let newEventLink = `results/index.html?city=${city}&category=events`;
   eventLink.href = newEventLink;
 
-  let newCoffeeShopLink = `results.html?city=${city}&category=coffeeShop`;
+  let newCoffeeShopLink = `results/index.html?city=${city}&category=coffeeShop`;
   coffeeShopLink.href = newCoffeeShopLink;
 
-  let newHealthBeautyLink = `results.html?city=${city}&category=healthBeauty`;
+  let newHealthBeautyLink = `results/index.html?city=${city}&category=healthBeauty`;
   healthBeautyLink.href = newHealthBeautyLink;
 
-  let newnightLifeLink = `results.html?city=${city}&category=nightlife`;
+  let newnightLifeLink = `results/index.html?city=${city}&category=nightlife`;
   nightLifeLink.href = newnightLifeLink;
 
-  let newMuseumsLink = `results.html?city=${city}&category=museums`;
+  let newMuseumsLink = `results/index.html?city=${city}&category=museums`;
   museumsLink.href = newMuseumsLink;
 }
 
