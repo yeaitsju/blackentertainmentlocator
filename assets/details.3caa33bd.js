@@ -1,4 +1,4 @@
-import"./modulepreload-polyfill.c7c6310f.js";function c(){var l=document.getElementById("MainImg"),s=document.getElementsByClassName("small-img");s[0].onclick=function(){l.src=s[0].src},s[1].onclick=function(){l.src=s[1].src},s[2].onclick=function(){l.src=s[2].src},s[3].onclick=function(){l.src=s[3].src}}function o(){fetch("https://www.apitutor.org/yelp/v3/businesses/6lPfM2AJIC6CZddrTvFYnA").then(i=>i.json()).then(i=>{console.log(i),e(i)})}function t(){fetch("https://www.apitutor.org/yelp/v3/businesses/3en3UzByLjBDd0whFjYdTQ/reviews").then(i=>i.json()).then(i=>{console.log(i)})}function e(l){const s=`
+import"./modulepreload-polyfill.c7c6310f.js";function t(){var l=document.getElementById("MainImg"),i=document.getElementsByClassName("small-img");i[0].onclick=function(){l.src=i[0].src},i[1].onclick=function(){l.src=i[1].src},i[2].onclick=function(){l.src=i[2].src},i[3].onclick=function(){l.src=i[3].src}}function e(l){let i=`https://www.apitutor.org/yelp/v3/businesses/${l}`;fetch(i).then(s=>s.json()).then(s=>{console.log(s),m(s)})}function n(l){let i=`https://www.apitutor.org/yelp/v3/businesses/${l}/reviews`;fetch(i).then(s=>s.json()).then(s=>{console.log(s)})}function m(l){const i=`
     <section class="container sbusiness my-5 pt-5">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
@@ -29,4 +29,4 @@ import"./modulepreload-polyfill.c7c6310f.js";function c(){var l=document.getElem
                 <span>Gotta figure out what to put here. sigh.....</span>
             </div>
         </div>
-    </section>`;document.querySelector("#business-detail").innerHTML=s,c()}o();t();
+    </section>`;document.querySelector("#business-detail").innerHTML=i,t()}const o=new Proxy(new URLSearchParams(window.location.search),{get:(l,i)=>l.get(i)});let c="6lPfM2AJIC6CZddrTvFYnA";o.businessid&&(c=o.businessid);e(c);n(c);
