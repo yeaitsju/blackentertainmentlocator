@@ -3,7 +3,6 @@
 import { initLayout } from "./layout.js";
 import { businessSearch, updateList } from "./business-search.js";
 
-
 //here is where business search gets called/envoked
 
 //intitializes the layout
