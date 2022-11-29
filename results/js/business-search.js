@@ -55,7 +55,7 @@ function buildCard(business) {
      <div> 
           <h3>${business.name} </h3>
           <p>${business.display_phone}</p>
-          <button>More</button>
+          <a href= "../details/index.html?businessid=${business.id}">More</a>
       </div>
   </section>
  `;
