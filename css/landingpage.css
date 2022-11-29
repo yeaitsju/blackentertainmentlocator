@@ -1,0 +1,259 @@
+html {
+  scroll-behavior: smooth;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+#logo1 {
+  width: 200px;
+  position: absolute;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  /* background-color:  rgb(120, 105, 13); */
+  background-color: #eed95b;
+  color: white;
+}
+
+h1 {
+  color: #eed95b;
+  /* color: rgb(107, 106, 22); */
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+  margin-top: 125px;
+}
+
+:single-button {
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 30px;
+}
+
+.header {
+  background-image: url("../images/BELlogo1.png");
+  height: 70px;
+  width: 110%;
+  margin: -10px;
+}
+
+header {
+  background-image: url("../images/chicagocitypic.png");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: 100% 500px;
+  background-size: cover;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #0b2a45;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #021728;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #55ffe5;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.contact-box {
+  background: #fff;
+  display: flex;
+}
+
+.contact-left {
+  flex-basis: 60%;
+  padding: 40px 60px;
+}
+
+.contact-right {
+  flex-basis: 40%;
+  padding: 40px;
+  background: #1c00b5;
+  color: #fff;
+}
+
+#contact h1 {
+  margin-bottom: 10px;
+}
+.container p {
+  margin-bottom: 40px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-row .input-group {
+  flex-basis: 45%;
+}
+
+input {
+  width: 99%;
+  border: 20px;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  padding-bottom: 5px;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+label {
+  margin-bottom: 6px;
+  display: block;
+  color: #1c00b5;
+}
+
+button {
+  background: #1c00b5;
+  width: 100px;
+  border: none;
+  outline: none;
+  color: #fff;
+  height: 35px;
+  border-radius: 30px;
+  margin-top: 20px;
+  box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+}
+
+.contact-left h3 {
+  color: #1c00b5;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.contact-right h3 {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+tr td:first-child {
+  padding-right: 20px;
+}
+
+tr td:first-child {
+  padding-top: 20px;
+}
+
+/* body {
+        background-image: url('https://images.pexels.com/photos/2252342/pexels-photo-2252342.jpeg?auto=compress&cs=tinysrgb&w=1200');
+        } */
+
+#get-started {
+  font-family: "Audiowide", sans-serif;
+
+  padding: 20px;
+  text-decoration: none;
+  background-color: #eed95bbb;
+  color: black;
+}
+
+#about,
+#contact {
+  min-height: 100vh;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {
+    background: green;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {
+    background: blue;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {
+    background: orange;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {
+    background: pink;
+  }
+}
