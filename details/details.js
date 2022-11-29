@@ -1,3 +1,6 @@
+import "./details.css";
+import "./footer.css";
+
 // Image carousel
 function makeCarousel() {
   var MainImg = document.getElementById("MainImg");
