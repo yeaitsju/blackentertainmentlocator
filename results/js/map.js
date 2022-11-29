@@ -1,5 +1,5 @@
 import { blackBusinesses } from "./config";
-import {} from "./leaflet-providers";
+// import {} from "leaflet-providers";
 let mymap;
 // console.log (blackBusinesses);
 const initMap = (myJson) => {

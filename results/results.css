@@ -60,18 +60,18 @@ body {
   font-family: "Audiowide", sans-serif;
 }
 
-body {
+/* body {
   background-image: url("chicagocitypic.png");
   background-color: #cccccc;
   background-repeat: no-repeat;
   background-size: 100% 500px;
-}
-.header {
+} */
+/* .header {
   background-image: url("BELlogo1.png");
   height: 70px;
   width: 110%;
   margin: -10px;
-}
+} */
 
 /* original layout for results below */
 .container {

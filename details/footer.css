@@ -1,0 +1,55 @@
+#footerp {
+  color: goldenrod;
+}
+
+.site-footer {
+  /* background-color: #838383; */
+  /* background-color: black; */
+  background-color: #333;
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+#social-wrapper {
+  text-align: center;
+}
+
+/*Social Media Icons*/
+.social-wrapper {
+  text-align: center;
+}
+
+.social-wrapper ul li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.fa-twitter,
+.fa-instagram,
+.fa-linkedin,
+.fa-facebook,
+.fa-tiktok {
+  margin-top: 0.625em;
+  color: goldenrod;
+  font-size: 50px;
+  width: 80px;
+  height: 80px;
+  opacity: 0.9;
+  /*for IE8 and earlier*/
+  filter: alpha(opacity=20);
+  border-radius: 25px;
+}
+
+.fa-twitter:hover,
+.fa-instagram:hover,
+.fa-linkedin:hover,
+.fa-facebook:hover,
+.fa-tiktok:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.footer-nav p {
+  text-align: center;
+}
