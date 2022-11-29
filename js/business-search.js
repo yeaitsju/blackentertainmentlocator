@@ -1,12 +1,12 @@
-import { blackBusinesses} from "./config";
-import {initMap} from "./map.js";
+import { blackBusinesses } from "./config";
+import { initMap } from "./map.js";
 //responsible for building all of the results
 // step 1 go out & get info from yelp
-//Go to the internet and get the info 
+//Go to the internet and get the info
 function businessSearch(category, location) {
- let url = `https://www.apitutor.org/yelp/v3/businesses/search?location=${location}&categories=${category}&limit=50&term=black owned`;
-  if(category == "museums"){
-    url = `https://www.apitutor.org/yelp/v3/businesses/search?location=${location}&categories=${category}&limit=50`; 
+  let url = `https://www.apitutor.org/yelp/v3/businesses/search?location=${location}&categories=${category}&limit=50&term=black owned`;
+  if (category == "museums") {
+    url = `https://www.apitutor.org/yelp/v3/businesses/search?location=${location}&categories=${category}&limit=50`;
   }
   console.log(url);
   // const url = `https://www.apitutor.org/yelp/v3/businesses/search?location=${location}&categories=${category}&limit=50`;
@@ -18,17 +18,17 @@ function businessSearch(category, location) {
     })
     .then((myJson) => {
       //once data comes back use it to display a list & make a map using that data Loops through
-     if (myJson.businesses.length == 0) {
+      if (myJson.businesses.length == 0) {
         alert("No BOB. Why?!?!");
-     } else {
+      } else {
         displayBusinessList(myJson);
         //display map here
         initMap(myJson);
-     }
+      }
     });
 }
 
-const displayBusinessList=(myJson)=>{
+const displayBusinessList = (myJson) => {
   console.log(myJson);
   // let myCustomColour = 'gray'
   //   if(blackBusinesses.includes(business.id)){
@@ -38,17 +38,17 @@ const displayBusinessList=(myJson)=>{
   //and a list of html tags that we can display in our browser
   const sections = myJson.businesses.map((business) => {
     console.log(business.name, business.rating);
-  
-    return buildCard(business);  
+
+    return buildCard(business);
   });
   document.querySelector(".list").innerHTML = sections.join("");
-}
+};
 
-function buildCard(business){
-  let className = 'result';
-    if(blackBusinesses.includes(business.id)){
-        className= 'result black-owned'
-    }
+function buildCard(business) {
+  let className = "result";
+  if (blackBusinesses.includes(business.id)) {
+    className = "result black-owned";
+  }
   return `
   <section class="${className}">
      <img src= "${business.image_url}"/>
