@@ -83,3 +83,10 @@
 #footerp {
   color: goldenrod;
 }
+
+
+.img-fluid {
+  height: 60%;
+  width: 80%
+}
+
