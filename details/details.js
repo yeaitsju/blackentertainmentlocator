@@ -40,7 +40,7 @@ function getBusinessReviews(businessid) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      //   displayBusiness(data);
+      displayReviews(data);
     });
 }
 function displayBusiness(businessData) {
@@ -53,11 +53,6 @@ function displayBusiness(businessData) {
                 }" id="MainImg" alt="">
 
                 <div class="small-img-group">
-                    <div class="small-img-col">
-                        <img src="${
-                          businessData.image_url
-                        }" width="85px" height="85px" class="small-img" alt="">
-                    </div>
                     <div class="small-img-col">
                         <img src="${
                           businessData.photos[0]
@@ -73,11 +68,18 @@ function displayBusiness(businessData) {
                           businessData.image_url
                         }" width="85px" height="85px" class="small-img" alt="">
                     </div>
+                    <div class="small-img-col">
+                        <img src="${
+                          businessData.photos[2]
+                        }" width="85px" height="85px" class="small-img" alt="">
+                    </div>
                 </div>
             </div>
-
+            
             <div class="col-lg-6 col-md-12 col-12">
+           
                 <h3 class="py-4">${businessData.name}</h3>
+                
                 <h4>${businessData.location.address1}</h4>
                 <h4>${businessData.location.address2}</h4>
                 <h4>${
@@ -88,12 +90,23 @@ function displayBusiness(businessData) {
                   businessData.location.zip_code
                 }</h4>
                 <h4>${businessData.display_phone}</h4>
-                <span>Gotta figure out what to put here. sigh.....</span>
+                <span id="business-reviews"> </span>
             </div>
+          
         </div>
     </section>`;
   document.querySelector("#business-detail").innerHTML = template;
   makeCarousel();
+  getBusinessReviews(businessid);
+}
+
+function displayReviews(reviewsData) {
+  console.log(reviewsData);
+  const review = reviewsData.reviews[0];
+  const template = `
+                <span>${review.text}</span>
+            `;
+  document.querySelector("#business-reviews").innerHTML = template;
 }
 
 const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -107,4 +120,12 @@ if (params.businessid) {
 }
 
 getBusinessDetails(businessid);
-getBusinessReviews(businessid);
+
+// {/* <aside>
+// <img id="ad" src="/public/images/AD.jpg" />
+// <h1>Your <br>Ad <br>Here</h1>
+// </aside> */}
+
+{
+  /* <span>${review.text}-${review.rating}</span> */
+}

@@ -3,12 +3,35 @@ html {
 }
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  /* background-color: #333; */
+  background-color: #515151;
   overflow: hidden;
+  /* to fix navbar to top of page */
+  /* position: fixed; */
+  top: 0;
+  width: 100%;
+  /* background-color: tansparent; */
 }
+
+/* changed topnav to id instead of class */
+/* #topnav {
+  /* background-color: #333; */
+/* background-color:#515151; */
+/* overflow: hidden; */
+/* to fix navbar to top of page */
+/* position: fixed; */
+/* top: 0;
+  width: 100%;  
+} */
+
 #logo1 {
   width: 200px;
   position: absolute;
+
+  /* margin-top: 2.5%; */
+  /* position: absolute; */
+  /* position: fixed; */
+  /* top: 0; */
 }
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -18,6 +41,7 @@ html {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Change the color of links on hover */
@@ -31,13 +55,20 @@ html {
   /* background-color:  rgb(120, 105, 13); */
   /* background-color: #eed95b; */
   background-color: goldenrod;
+  /* background-color: #af7b51; */
   color: white;
+}
+
+.topnav a.active:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 /* This was h1 but h1 was on landing page css and contact us css, so I made an ID for landing page h1 */
 #label {
   /* color: #eed95b; */
   color: goldenrod;
+  /* color: #af7b51; */
   /* color: rgb(107, 106, 22); */
   text-align: center;
   text-shadow: 1px 1px 1px black;
@@ -127,7 +158,10 @@ body {
 }
 .contact-box {
   /* background: goldenrod; */
-  background: #333;
+  /* background: #333; */
+  /* background: #404040; */
+  background: #515151;
+  /* background: #717171; */
   display: flex;
 }
 .contact-left {
@@ -318,6 +352,7 @@ tr td {
   text-decoration: none;
   /* background-color: #eed95bbb; */
   background-color: goldenrod;
+  /* background-color: #af7b51; */
   color: black;
 }
 
@@ -402,8 +437,8 @@ figcaption {
   font-size: 75px;
   margin-top: 50px;
   margin-left: 40px;
-  /* color: goldenrod; */
-  color: #af7b51;
+  color: goldenrod;
+  /* color: #af7b51; */
   font-family: calibri;
 }
 
@@ -413,4 +448,30 @@ figcaption {
 #about {
   /* background-color: #ccb8df; */
   background-color: #2e5984;
+}
+
+/* Adding effect to categories section */
+
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrapper > img {
+  display: blocvk;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.img-wrapper > .cat1 {
+  position: absolute;
+  inset: 0;
+  font-size: 2rem;
+  padding: 1rem;
+  background: rgba (255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
