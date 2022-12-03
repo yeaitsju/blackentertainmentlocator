@@ -44,8 +44,6 @@ function getBusinessReviews(businessid) {
     });
 }
 function displayBusiness(businessData) {
-
-
   const template = `
     <section class="container sbusiness my-5 pt-5">
         <div class="row mt-5">
@@ -110,7 +108,6 @@ function displayBusiness(businessData) {
 //   document.querySelector("#business-detail").innerHTML = template;
 // }
 
-
 const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
 });
@@ -123,7 +120,6 @@ if (params.businessid) {
 
 getBusinessDetails(businessid);
 getBusinessReviews(businessid);
-
 
 // {/* <aside>
 // <img id="ad" src="/public/images/AD.jpg" />
