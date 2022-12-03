@@ -10,19 +10,11 @@ const initLayout = () => {
               <div id="search"></div>
               <span id="cabe"></span>
           </div>
-       
-        <!-- "Once you've captured a visitor, you need to guide them through your website with ease so their user experience is pleasant. Your HTML links are vitat to guiding your user from one page on your website to another. -->
-
-        <!-- Good HTML links increase a user's session time and can lead to more pages visited per session — two metrics that are important to web analytics." Semrush -->
-        <!-- Examples of a href -->
-        <!-- <a href="url">Link text or object</a> -->
-        <!-- <a href="https://www.semrush.com/">Visit Semrush!</a> -->
-        <a class="active" href="#home">Home</a>
-        <!-- <a href="#photos">Photos</a> -->
+      
+        <a class="active" href="../index.html#home">Home</a>
         <a href="../index.html#contact">Contact</a>
         <a href="../index.html#about">About</a>
 
-        <!-- <a href="#Photos">Photos</a> -->
       </div>
              
 
@@ -57,43 +49,35 @@ const initLayout = () => {
               <section class="map" id="my_map"></section>
        
 
-              <footer id="colophon" class="site-footer" role=""contentinfo">
- 
-              <div class="social-wrapper">
-                  <ul>
-                      <li>
-                          <a href="#" target="_blank">
-                          <i class="fa-brands fa-twitter"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#" target="_blank">
-                          <i class="fa-brands fa-instagram"></i> 
-                          </a> 
-                      </li>
-                      <li>
-                          <a href="#" target="_blank">
-                          <i class="fa-brands fa-linkedin"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#" target="_blank">
-                          <i class="fa-brands fa-facebook"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#" target="_blank">
-                          <i class="fa-brands fa-tiktok"></i>
-                          </a>
-                      </li>
-                  </ul>
-              </div> 
-              <nav class="footer-nav" role="navigation">
-                  <p>
-                      Copyright &copy; 2022 Black Innovators. All rights reserved.
-                  </p>
-              </nav>
-          </footer>
+              <footer id="colophon" class="site-footer" role="contentinfo">
+      <div class="social-wrapper">
+        <ul>
+          <li>
+            <i class="fa-brands fa-twitter"></i>
+          </li>
+          <li>
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+          <li>
+            <i class="fa-brands fa-linkedin"></i>
+          </li>
+          <li>
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+          <li>
+            <i class="fa-brands fa-tiktok"></i>
+          </li>
+        </ul>
+      </div>
+      <nav class="footer-nav" role="navigation">
+        <p id="footerp">
+          Copyright &copy; 2022 Black Innovators. All rights reserved.
+        </p>
+      </nav>
+    </footer>
+  </body>
+</html>
+
 </main>
         `;
 };

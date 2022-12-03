@@ -21,7 +21,7 @@ html {
 }
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: #515151;
   /* background-color: black; */
   overflow: hidden;
   /* height: 150px; */
@@ -31,6 +31,7 @@ html {
 #logo1 {
   width: 200px;
   position: absolute;
+  /* margin-top: 2.5%; */
 }
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -56,9 +57,14 @@ html {
   color: white;
   /* color: black; */
 }
-body {
-  font-family: "Audiowide", sans-serif;
+
+.topnav a.active:hover {
+  background-color: #ddd;
+  color: black
 }
+/* body {
+  font-family: "Audiowide", sans-serif;
+} */
 
 /* body {
   background-image: url("chicagocitypic.png");
@@ -251,7 +257,7 @@ p {
 .site-footer {
   /* background-color: #838383; */
   grid-column: 1/4;
-  background-color: black;
+  background-color: #515151;
   text-align: center;
   margin: 10px 0;
   padding: 10px 0;

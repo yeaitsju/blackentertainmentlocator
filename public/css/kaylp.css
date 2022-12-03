@@ -7,10 +7,10 @@ html {
   background-color:#515151;
   overflow: hidden;
   /* to fix navbar to top of page */
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   width: 100%;
-  background-color: tansparent;
+  /* background-color: tansparent; */
 }
   
 /* changed topnav to id instead of class */
@@ -26,9 +26,9 @@ html {
 
 #logo1 {
   width: 200px;
-  position: relative;
+  position: absolute;
   
-  margin-top: 2.5%;
+  /* margin-top: 2.5%; */
   /* position: absolute; */
   /* position: fixed; */
   /* top: 0; */
@@ -41,6 +41,7 @@ html {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Change the color of links on hover */
@@ -56,6 +57,11 @@ html {
   background-color: goldenrod;
   /* background-color: #af7b51; */
   color: white;
+}
+
+.topnav a.active:hover {
+  background-color: #ddd;
+  color: black
 }
 
 /* This was h1 but h1 was on landing page css and contact us css, so I made an ID for landing page h1 */
