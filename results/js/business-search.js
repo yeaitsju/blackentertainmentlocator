@@ -19,7 +19,8 @@ function businessSearch(category, location) {
     .then((myJson) => {
       //once data comes back use it to display a list & make a map using that data Loops through
       if (myJson.businesses.length == 0) {
-        alert("No BOB. Why?!?!");
+        // alert("No BOB. Why?!?!");
+        showMessage();
       } else {
         displayBusinessList(myJson);
         //display map here
@@ -43,6 +44,23 @@ const displayBusinessList = (myJson) => {
   });
   document.querySelector(".list").innerHTML = sections.join("");
 };
+
+function showMessage() {
+  const template = `
+    <section id="bg">
+      <div>
+        <button id="close">x</button>
+        <h1>No Black Owned Businesses Found!?</h1>
+      </div>
+    </section>
+  `;
+  document.body.insertAdjacentHTML("afterbegin", template);
+  document.querySelector("#close").onclick = hideMessage;
+}
+
+function hideMessage() {
+  document.querySelector("#bg").remove();
+}
 
 function buildCard(business) {
   let className = "result";

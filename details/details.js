@@ -81,7 +81,7 @@ function displayBusiness(businessData) {
                 <h3 class="py-4">${businessData.name}</h3>
                 
                 <h4>${businessData.location.address1}</h4>
-                <h4>${businessData.location.address2}</h4>
+               
                 <h4>${
                   businessData.location.city +
                   ", " +
@@ -99,12 +99,31 @@ function displayBusiness(businessData) {
   makeCarousel();
   getBusinessReviews(businessid);
 }
-
+// function displayReviews(reviewsData) {
+//   console.log(reviewsData);
+//   const review = reviewsData.reviews[0];
+//   const template = `
+//                 <span>${review.text}</span>
+//             `;
+//   document.querySelector("#business-reviews").innerHTML = template;
+// }
 function displayReviews(reviewsData) {
   console.log(reviewsData);
   const review = reviewsData.reviews[0];
+  const review2 = reviewsData.reviews[1];
+  const review3 = reviewsData.reviews[2];
   const template = `
-                <span>${review.text}</span>
+                <br>
+                <h3>CUSTOMER REVIEWS</h3>
+                <hr>
+                <br>
+                <span>1. ${review.text}</span>
+                <br>
+                <br>
+                <span>2. ${review2.text}</span>
+                <br>
+                <br>
+                <span>3. ${review3.text}</span>
             `;
   document.querySelector("#business-reviews").innerHTML = template;
 }
