@@ -40,7 +40,7 @@ function getBusinessReviews(businessid) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      // displayReviews(data);
+      displayReviews(data);
     });
 }
 function displayBusiness(businessData) {
@@ -90,23 +90,24 @@ function displayBusiness(businessData) {
                   businessData.location.zip_code
                 }</h4>
                 <h4>${businessData.display_phone}</h4>
-                
-                <span id="reviews">Give this business their first review!!</span>
-                
+                <span id="business-reviews"> </span>
             </div>
           
         </div>
     </section>`;
   document.querySelector("#business-detail").innerHTML = template;
   makeCarousel();
+  getBusinessReviews(businessid);
 }
 
-// function displayReviews(reviewsData) {
-//   const template = `
-//                 <span>Business reviews will go here but gotta figure out how to put them here</span>
-//             `;
-//   document.querySelector("#business-detail").innerHTML = template;
-// }
+function displayReviews(reviewsData) {
+  console.log(reviewsData);
+  const review = reviewsData.reviews[0];
+  const template = `
+                <span>${review.text}</span>
+            `;
+  document.querySelector("#business-reviews").innerHTML = template;
+}
 
 const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
@@ -119,9 +120,12 @@ if (params.businessid) {
 }
 
 getBusinessDetails(businessid);
-getBusinessReviews(businessid);
 
 // {/* <aside>
 // <img id="ad" src="/public/images/AD.jpg" />
 // <h1>Your <br>Ad <br>Here</h1>
 // </aside> */}
+
+{
+  /* <span>${review.text}-${review.rating}</span> */
+}

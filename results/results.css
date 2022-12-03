@@ -60,7 +60,7 @@ html {
 
 .topnav a.active:hover {
   background-color: #ddd;
-  color: black
+  color: black;
 }
 /* body {
   font-family: "Audiowide", sans-serif;

@@ -4,7 +4,7 @@ html {
 /* Add a black background color to the top navigation */
 .topnav {
   /* background-color: #333; */
-  background-color:#515151;
+  background-color: #515151;
   overflow: hidden;
   /* to fix navbar to top of page */
   /* position: fixed; */
@@ -12,22 +12,22 @@ html {
   width: 100%;
   /* background-color: tansparent; */
 }
-  
+
 /* changed topnav to id instead of class */
 /* #topnav {
   /* background-color: #333; */
-  /* background-color:#515151; */
-  /* overflow: hidden; */
-  /* to fix navbar to top of page */
-  /* position: fixed; */
-  /* top: 0;
+/* background-color:#515151; */
+/* overflow: hidden; */
+/* to fix navbar to top of page */
+/* position: fixed; */
+/* top: 0;
   width: 100%;  
-} */ 
+} */
 
 #logo1 {
   width: 200px;
   position: absolute;
-  
+
   /* margin-top: 2.5%; */
   /* position: absolute; */
   /* position: fixed; */
@@ -61,7 +61,7 @@ html {
 
 .topnav a.active:hover {
   background-color: #ddd;
-  color: black
+  color: black;
 }
 
 /* This was h1 but h1 was on landing page css and contact us css, so I made an ID for landing page h1 */
@@ -455,7 +455,6 @@ figcaption {
 .img-wrapper {
   position: relative;
   overflow: hidden;
-
 }
 
 .img-wrapper > img {
@@ -471,7 +470,7 @@ figcaption {
   inset: 0;
   font-size: 2rem;
   padding: 1rem;
-  background: rgba (255, 255, 255, .4);
+  background: rgba (255, 255, 255, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
